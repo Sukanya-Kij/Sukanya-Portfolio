@@ -35,7 +35,7 @@ export default function AboutPage() {
 
         <section className="reveal premium-card overflow-hidden p-0 group">
           <div className="relative h-full w-full min-h-[400px]">
-            <Image src="/images/people/formal/fern-office-portrait-smile.jpg" alt="Fern formal portrait in office attire" fill className="media-lift h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" priority />
+            <Image src="/images/people/formal/fern-office-portrait-smile.jpg" alt="Fern formal portrait in office attire" fill className="media-lift h-full w-full object-cover" priority />
             <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
         </section>
@@ -89,7 +89,7 @@ export default function AboutPage() {
 
           {/* Decorative image in languages section */}
           <div className="mt-8 rounded-xl overflow-hidden relative h-48 border border-emerald-100/50 shadow-inner group">
-            <Image src="/images/abstract/emerald-gold-texture.png" alt="Abstract luxury emerald texture" fill className="object-cover opacity-90 mix-blend-multiply transition-all duration-700 group-hover:scale-105 group-hover:opacity-100" />
+            <Image src="/images/abstract/emerald-gold-texture.png" alt="Abstract luxury emerald texture" fill className="media-lift object-cover opacity-90 mix-blend-multiply transition-opacity duration-1000 group-hover:opacity-100" />
             <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/40 to-transparent"></div>
           </div>
         </section>

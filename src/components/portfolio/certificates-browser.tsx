@@ -166,7 +166,7 @@ export function CertificatesBrowser({ items }: { items: CertificateItem[] }) {
           {filtered.map((item) => (
             <article
               key={item.id}
-              className="reveal group relative flex flex-col overflow-hidden rounded-2xl border border-emerald-300/30 bg-white p-1 hover:border-emerald-400/50 hover:shadow-xl hover:shadow-emerald-900/5"
+              className="reveal premium-card group relative flex flex-col overflow-hidden rounded-2xl border border-emerald-300/30 bg-white p-1 hover:border-emerald-400/50 hover:shadow-xl hover:shadow-emerald-900/5"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[#c8a96f]/[0.02] to-emerald-500/[0.02] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
@@ -177,7 +177,7 @@ export function CertificatesBrowser({ items }: { items: CertificateItem[] }) {
                     alt={item.title.en}
                     width={1200}
                     height={800}
-                    className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="media-lift h-48 w-full object-cover"
                   />
                 ) : (
                   <div className="flex h-48 flex-col items-center justify-center gap-2 text-emerald-700/60">

@@ -32,7 +32,7 @@ export default function HomePage() {
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-emerald-900/80">{ui.home.intro.en}</p>
 
           <div className="mt-10 flex flex-wrap gap-4 items-center">
-            <Link href="/about" className="btn-primary rounded-full bg-gradient-to-r from-emerald-800 to-emerald-950 px-8 py-3.5 text-sm font-bold tracking-wide text-white shadow-xl hover:shadow-emerald-900/20 transition-all hover:scale-105">
+            <Link href="/about" className="btn-primary rounded-full bg-gradient-to-r from-emerald-800 to-emerald-950 px-8 py-3.5 text-sm font-bold tracking-wide text-white shadow-xl hover:shadow-emerald-900/20 transition-all">
               {ui.home.ctaExperience}
             </Link>
             <Link href="/portfolio" className="group flex items-center gap-2 px-6 py-3.5 text-sm font-bold tracking-wide text-emerald-900 hover:text-emerald-700 transition-colors">
@@ -67,7 +67,7 @@ export default function HomePage() {
           { title: "Process Improvement", desc: ui.home.metricAutomation.en, icon: "⚡", metric: "30%" }
         ].map((item, i) => (
           <article key={i} className="reveal premium-card p-8 group hover:bg-emerald-50/50 transition-colors">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-100 to-emerald-50 flex items-center justify-center text-2xl mb-6 shadow-sm group-hover:scale-110 transition-transform duration-500">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-100 to-emerald-50 flex items-center justify-center text-2xl mb-6 shadow-sm group-hover:-translate-y-1 transition-transform duration-700">
               {item.icon}
             </div>
             <div className="flex items-baseline gap-2 mb-2">
@@ -82,7 +82,7 @@ export default function HomePage() {
       {/* Image Gallery */}
       <section className="grid gap-6 lg:grid-cols-3">
         <article className="reveal premium-card overflow-hidden lg:col-span-2 relative group h-80">
-          <Image src="/images/achievements/sgs-team-recognition-stage.jpg" alt="Fern with team during standards recognition event" fill className="media-lift object-cover transition-transform duration-700 group-hover:scale-110" />
+          <Image src="/images/achievements/sgs-team-recognition-stage.jpg" alt="Fern with team during standards recognition event" fill className="media-lift object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/90 via-emerald-900/20 to-transparent"></div>
           <div className="absolute bottom-6 left-6 right-6 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
             <h3 className="text-white font-bold text-xl mb-1">Team Recognition</h3>
@@ -90,7 +90,7 @@ export default function HomePage() {
           </div>
         </article>
         <article className="reveal premium-card overflow-hidden relative group h-80">
-          <Image src="/images/people/casual/fern-city-night-casual.jpg" alt="Fern portrait at city night" fill className="media-lift object-cover transition-transform duration-700 group-hover:scale-110" />
+          <Image src="/images/people/casual/fern-city-night-casual.jpg" alt="Fern portrait at city night" fill className="media-lift object-cover" />
           <div className="absolute inset-0 bg-emerald-950/20 group-hover:bg-transparent transition-colors duration-500"></div>
         </article>
       </section>
@@ -116,7 +116,7 @@ export default function HomePage() {
             src="/images/certificates/sgs-certificate-crm-auto-alert-2023.jpg"
             alt="CRM Auto Alert recognition certificate"
             fill
-            className="media-lift object-cover lg:object-cover sm:object-contain bg-emerald-50/50 p-6 transition-transform duration-700 group-hover:scale-105"
+            className="media-lift object-cover lg:object-cover sm:object-contain bg-emerald-50/50 p-6"
           />
           <div className="absolute inset-0 ring-1 ring-inset ring-black/5 pointer-events-none rounded-2xl"></div>
         </article>
