@@ -4,9 +4,7 @@ import type { Metadata } from "next";
 import { profile } from "@/lib/content";
 import { primary, ui } from "@/lib/i18n";
 import { buildPageMetadata } from "@/lib/seo";
-import { Briefcase, Handshake, TrendingUp, BarChart, Target } from "lucide-react";
-import { SkillsRadarChart } from "@/components/portfolio/skills-radar-chart";
-import { ImpactAreaChart } from "@/components/portfolio/impact-area-chart";
+import { Briefcase, Handshake, TrendingUp } from "lucide-react";
 
 export const metadata: Metadata = buildPageMetadata(
   "Home",
@@ -46,7 +44,14 @@ export default function HomePage() {
         </div>
 
         <div className="relative h-96 lg:col-span-2 lg:h-full min-h-[500px] z-10 group">
-          <Image src="/images/people/formal/fern-boardroom-professional.jpg" alt="Fern in professional boardroom meeting" fill className="media-lift object-cover object-[center_30%]" priority />
+          <Image
+            src="/images/people/formal/fern-boardroom-professional.jpg"
+            alt="Fern in professional boardroom meeting"
+            fill
+            sizes="(min-width: 1024px) 40vw, 100vw"
+            className="media-lift object-cover object-[center_30%]"
+            priority
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-transparent to-transparent opacity-60"></div>
 
           {/* Floating Badges */}
@@ -85,39 +90,17 @@ export default function HomePage() {
         })}
       </section>
 
-      {/* Performance Metrics - Recharts */}
-      <section className="grid gap-6 lg:grid-cols-12">
-        {/* Radar Chart */}
-        <article className="reveal premium-card p-6 lg:col-span-4 flex flex-col items-center bg-white/60">
-          <div className="w-full flex items-center justify-between mb-2">
-            <h2 className="heading-luxe text-xl text-emerald-950 flex items-center gap-2">
-              <Target className="h-5 w-5 text-[#c8a96f]" />
-              Core Competencies
-            </h2>
-            <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600/60 bg-emerald-50 px-2 py-0.5 rounded-full">Skills</span>
-          </div>
-          <SkillsRadarChart />
-        </article>
-
-        {/* Area Chart */}
-        <article className="reveal premium-card p-6 lg:col-span-8 flex flex-col justify-between bg-white/60" style={{ animationDelay: '100ms' }}>
-          <div className="w-full flex items-center justify-between mb-4">
-            <div className="space-y-1">
-              <h2 className="heading-luxe text-xl text-emerald-950 flex items-center gap-2">
-                <BarChart className="h-5 w-5 text-[#c8a96f]" />
-                Performance Impact
-              </h2>
-              <p className="text-xs font-semibold tracking-wide text-emerald-700/80">Certificate Renewal Retention vs Industry Average</p>
-            </div>
-          </div>
-          <ImpactAreaChart />
-        </article>
-      </section>
 
       {/* Image Gallery */}
       <section className="grid gap-6 lg:grid-cols-3">
         <article className="reveal premium-card overflow-hidden lg:col-span-2 relative group h-80">
-          <Image src="/images/achievements/sgs-team-recognition-stage.jpg" alt="Fern with team during standards recognition event" fill className="media-lift object-cover" />
+          <Image
+            src="/images/achievements/sgs-team-recognition-stage.jpg"
+            alt="Fern with team during standards recognition event"
+            fill
+            sizes="(min-width: 1024px) 66vw, 100vw"
+            className="media-lift object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/90 via-emerald-900/20 to-transparent"></div>
           <div className="absolute bottom-6 left-6 right-6 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
             <h3 className="text-white font-bold text-xl mb-1">Team Recognition</h3>
@@ -125,7 +108,13 @@ export default function HomePage() {
           </div>
         </article>
         <article className="reveal premium-card overflow-hidden relative group h-80">
-          <Image src="/images/people/casual/fern-city-night-casual.jpg" alt="Fern portrait at city night" fill className="media-lift object-cover" />
+          <Image
+            src="/images/people/casual/fern-city-night-casual.jpg"
+            alt="Fern portrait at city night"
+            fill
+            sizes="(min-width: 1024px) 33vw, 100vw"
+            className="media-lift object-cover"
+          />
           <div className="absolute inset-0 bg-emerald-950/20 group-hover:bg-transparent transition-colors duration-500"></div>
         </article>
       </section>
@@ -140,7 +129,7 @@ export default function HomePage() {
           <h2 className="heading-luxe text-4xl text-emerald-950 mb-6">Professional Summary</h2>
           <p className="text-base leading-relaxed text-emerald-900/85 md:text-lg">{primary(profile.summary)}</p>
           <div className="mt-8 pt-6 border-t border-emerald-900/10">
-            <Link href="/about" className="font-semibold text-emerald-700 hover:text-emerald-900 inline-flex items-center gap-2 group">
+            <Link href="/about" className="group inline-flex min-h-[44px] items-center gap-2 px-1 font-semibold text-emerald-700 hover:text-emerald-900">
               Read Full Bio
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
@@ -151,7 +140,9 @@ export default function HomePage() {
             src="/images/certificates/sgs-certificate-crm-auto-alert-2023.jpg"
             alt="CRM Auto Alert recognition certificate"
             fill
+            sizes="(min-width: 1024px) 40vw, 100vw"
             className="media-lift object-cover lg:object-cover sm:object-contain bg-emerald-50/50 p-6"
+            priority
           />
           <div className="absolute inset-0 ring-1 ring-inset ring-black/5 pointer-events-none rounded-2xl"></div>
         </article>

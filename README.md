@@ -10,7 +10,8 @@ English-first portfolio website with Thai support, built with Next.js App Router
 ## Stack
 - Next.js 15 + TypeScript
 - Tailwind CSS v4
-- Single route set: `/`, `/about`, `/projects`, `/certificates`, `/contact`
+- Primary route set: `/`, `/about`, `/portfolio`, `/contact`
+- Legacy redirects kept for compatibility: `/projects` -> `/portfolio`, `/certificates` -> `/portfolio`, `/experience` -> `/about`, `/resume` -> latest resume PDF
 
 ## Run locally
 ```bash

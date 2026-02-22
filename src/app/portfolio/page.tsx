@@ -51,6 +51,7 @@ export default function PortfolioPage() {
                   alt={primary(item.title)}
                   width={1200}
                   height={800}
+                  priority={item.id === certificateItems[0]?.id}
                   className="media-lift h-64 w-full object-cover"
                 />
               ) : null}

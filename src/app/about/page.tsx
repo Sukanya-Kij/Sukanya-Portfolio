@@ -15,7 +15,14 @@ export default function AboutPage() {
       <section className="reveal premium-card relative overflow-hidden rounded-3xl p-10 md:p-16 shadow-2xl min-h-[40vh] flex flex-col justify-end">
         {/* Background Texture */}
         <div className="absolute inset-0 z-0">
-          <Image src="/images/abstract/emerald-gold-texture.png" alt="Abstract luxury texture" fill className="object-cover opacity-80 mix-blend-multiply" priority />
+          <Image
+            src="/images/abstract/emerald-gold-texture.png"
+            alt="Abstract luxury texture"
+            fill
+            sizes="100vw"
+            className="object-cover opacity-80 mix-blend-multiply"
+            priority
+          />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/80 to-emerald-900/40 z-10" />
 
@@ -54,7 +61,14 @@ export default function AboutPage() {
 
         <section className="reveal premium-card overflow-hidden p-0 group">
           <div className="relative h-full w-full min-h-[400px]">
-            <Image src="/images/people/formal/fern-office-portrait-smile.jpg" alt="Fern formal portrait in office attire" fill className="media-lift h-full w-full object-cover" priority />
+            <Image
+              src="/images/people/formal/fern-office-portrait-smile.jpg"
+              alt="Fern formal portrait in office attire"
+              fill
+              sizes="(min-width: 1024px) 33vw, 100vw"
+              className="media-lift h-full w-full object-cover"
+              priority
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
         </section>

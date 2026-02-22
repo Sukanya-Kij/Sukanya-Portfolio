@@ -14,7 +14,14 @@ export default function ContactPage() {
       <section className="reveal premium-card relative overflow-hidden rounded-3xl min-h-[45vh] shadow-2xl flex flex-col justify-center items-center text-center p-10 md:p-16">
         {/* Background Network Image */}
         <div className="absolute inset-0 z-0">
-          <Image src="/images/abstract/contact-emerald-gold-network.png" alt="Abstract networking lines" fill className="object-cover opacity-90 mix-blend-screen" priority />
+          <Image
+            src="/images/abstract/contact-emerald-gold-network.png"
+            alt="Abstract networking lines"
+            fill
+            sizes="100vw"
+            className="object-cover opacity-90 mix-blend-screen"
+            priority
+          />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-emerald-950/90 via-emerald-950/60 to-emerald-900/70 z-10" />
 
@@ -37,7 +44,13 @@ export default function ContactPage() {
         {/* Contact Info Card */}
         <article className="reveal premium-card overflow-hidden group lg:col-span-2">
           <div className="relative h-64 sm:h-80 w-full">
-            <Image src="/images/people/formal/fern-office-portrait-contact.jpg" alt="Fern portrait for contact section" fill className="media-lift object-cover object-[center_30%]" />
+            <Image
+              src="/images/people/formal/fern-office-portrait-contact.jpg"
+              alt="Fern portrait for contact section"
+              fill
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              className="media-lift object-cover object-[center_30%]"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/30 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-700"></div>
             <div className="absolute bottom-6 left-6 right-6">
               <h3 className="text-white font-bold text-2xl mb-1">{profile.nickname} ({profile.fullName})</h3>
@@ -50,8 +63,11 @@ export default function ContactPage() {
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dfca9f" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
               </div>
               <div>
-                <p className="text-[10px] font-bold tracking-widest text-[#b89555] uppercase mb-1.5">{ui.contact.emailLabel}</p>
-                <a href={`mailto:${profile.email}`} className="text-emerald-950 font-semibold tracking-wide hover:text-emerald-700 transition-colors break-all">
+                <p className="mb-1.5 text-xs font-bold tracking-widest text-[#b89555] uppercase">{ui.contact.emailLabel}</p>
+                <a
+                  href={`mailto:${profile.email}`}
+                  className="inline-flex min-h-[44px] items-center text-emerald-950 font-semibold tracking-wide hover:text-emerald-700 transition-colors break-all"
+                >
                   {profile.email}
                 </a>
               </div>
@@ -62,8 +78,13 @@ export default function ContactPage() {
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dfca9f" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
               </div>
               <div>
-                <p className="text-[10px] font-bold tracking-widest text-[#b89555] uppercase mb-1.5">Instagram</p>
-                <a href="https://www.instagram.com/tonfern98/" target="_blank" rel="noopener noreferrer" className="text-emerald-950 font-semibold tracking-wide hover:text-emerald-700 transition-colors break-all">
+                <p className="mb-1.5 text-xs font-bold tracking-widest text-[#b89555] uppercase">Instagram</p>
+                <a
+                  href="https://www.instagram.com/tonfern98/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-[44px] items-center text-emerald-950 font-semibold tracking-wide hover:text-emerald-700 transition-colors break-all"
+                >
                   @tonfern98
                 </a>
               </div>
