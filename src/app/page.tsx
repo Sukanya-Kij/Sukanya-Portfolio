@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { profile } from "@/lib/content";
 import { primary, ui } from "@/lib/i18n";
 import { buildPageMetadata } from "@/lib/seo";
+import { Briefcase, Handshake, TrendingUp } from "lucide-react";
 
 export const metadata: Metadata = buildPageMetadata(
   "Home",
@@ -62,21 +63,24 @@ export default function HomePage() {
       {/* KPI Highlights */}
       <section className="grid gap-6 sm:grid-cols-3">
         {[
-          { title: "Experience", desc: ui.home.yearsExp.en, icon: "⏳", metric: "4+" },
-          { title: "Retention KPI", desc: ui.home.metricRenewal.en, icon: "🤝", metric: "90%" },
-          { title: "Process Improvement", desc: ui.home.metricAutomation.en, icon: "⚡", metric: "30%" }
-        ].map((item, i) => (
-          <article key={i} className="reveal premium-card p-8 group hover:bg-emerald-50/50 transition-colors">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-100 to-emerald-50 flex items-center justify-center text-2xl mb-6 shadow-sm group-hover:-translate-y-1 transition-transform duration-700">
-              {item.icon}
-            </div>
-            <div className="flex items-baseline gap-2 mb-2">
-              <span className="text-3xl font-bold text-emerald-900">{item.metric}</span>
-              <h2 className="text-sm font-bold tracking-wide text-emerald-800/70 uppercase">{item.title}</h2>
-            </div>
-            <p className="mt-2 text-sm leading-relaxed text-emerald-900/80 font-medium">{item.desc}</p>
-          </article>
-        ))}
+          { title: "Experience", desc: ui.home.yearsExp.en, icon: Briefcase, metric: "4+" },
+          { title: "Retention KPI", desc: ui.home.metricRenewal.en, icon: Handshake, metric: "90%" },
+          { title: "Process Improvement", desc: ui.home.metricAutomation.en, icon: TrendingUp, metric: "30%" }
+        ].map((item, i) => {
+          const Icon = item.icon;
+          return (
+            <article key={i} className="reveal premium-card p-8 group hover:bg-emerald-50/50 transition-colors border-emerald-950/5 hover:border-emerald-200/60">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-900 to-emerald-950 flex items-center justify-center mb-6 shadow-inner ring-1 ring-white/10 group-hover:-translate-y-1 transition-transform duration-700">
+                <Icon className="h-5 w-5 text-[#dfca9f]" />
+              </div>
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className="text-3xl font-extrabold text-emerald-950 tracking-tight">{item.metric}</span>
+                <h2 className="text-xs font-bold tracking-widest text-[#b89555] uppercase">{item.title}</h2>
+              </div>
+              <p className="mt-2 text-sm leading-relaxed text-emerald-900/80 font-medium">{item.desc}</p>
+            </article>
+          );
+        })}
       </section>
 
       {/* Image Gallery */}
