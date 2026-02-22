@@ -83,12 +83,12 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className="sticky top-0 z-30 border-b border-emerald-300/20 bg-[#06110d]/92 text-emerald-50 backdrop-blur-xl">
+      <header className="sticky top-0 z-30 border-b border-emerald-300/25 bg-[#06110d]/96 text-emerald-50 backdrop-blur-xl">
         <div className="mx-auto w-full max-w-6xl px-4 py-4 sm:px-6 lg:px-8">
           <div className="reveal flex items-center justify-between gap-4">
             <Link
               href="/"
-              className="heading-luxe inline-flex min-h-[44px] min-w-[44px] items-center text-lg font-semibold tracking-[0.1em] text-emerald-50 uppercase transition hover:text-emerald-200"
+              className="heading-luxe inline-flex min-h-[44px] min-w-[44px] items-center text-base font-semibold tracking-[0.08em] text-emerald-50 uppercase transition hover:text-emerald-200 sm:text-lg sm:tracking-[0.1em]"
             >
               {ui.brand}
             </Link>
@@ -97,7 +97,7 @@ export function SiteHeader() {
 
             <button
               type="button"
-              className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl border border-emerald-100/45 bg-emerald-900/88 px-4 py-2 text-sm font-semibold text-emerald-50 shadow-lg shadow-black/30 transition hover:bg-emerald-800/92 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#dfca9f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#06110d] sm:hidden"
+              className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl border border-emerald-100/60 bg-[#083426] px-4 py-2 text-sm font-semibold text-emerald-50 shadow-[0_12px_24px_rgba(0,0,0,0.4)] ring-1 ring-black/20 transition hover:bg-[#0b4a37] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#dfca9f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#06110d] sm:hidden"
               aria-expanded={menuOpen}
               aria-controls="mobile-nav-drawer"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -131,14 +131,14 @@ export function SiteHeader() {
 
       {menuOpen ? (
         <div
-          className="fixed inset-0 z-40 bg-black/75 sm:hidden backdrop-blur-sm"
+          className="fixed inset-0 z-40 bg-black/82 sm:hidden backdrop-blur-[3px]"
           onClick={() => setMenuOpen(false)}
           role="presentation"
         >
           <nav
             ref={drawerRef}
             id="mobile-nav-drawer"
-            className="absolute top-0 right-0 h-full w-72 border-l border-emerald-500/40 bg-[#030c08] p-5 pt-6 shadow-[0_0_40px_rgba(0,0,0,0.8)]"
+            className="absolute top-0 right-0 h-full w-72 border-l border-emerald-400/45 bg-[linear-gradient(180deg,#03150f_0%,#02110c_100%)] p-5 pt-6 shadow-[0_0_40px_rgba(0,0,0,0.82)]"
             aria-label="Mobile primary"
             onClick={(event) => event.stopPropagation()}
           >
@@ -146,7 +146,7 @@ export function SiteHeader() {
               <p className="px-2 text-xs font-semibold tracking-[0.16em] text-emerald-200 uppercase">Navigation</p>
               <button
                 type="button"
-                className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl border border-emerald-100/40 bg-emerald-900/80 px-3 py-2 text-emerald-50 shadow-md shadow-black/20 transition hover:bg-emerald-800/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#dfca9f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#071813]"
+                className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl border border-emerald-100/55 bg-[#083426] px-3 py-2 text-emerald-50 shadow-[0_8px_18px_rgba(0,0,0,0.35)] ring-1 ring-black/25 transition hover:bg-[#0b4a37] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#dfca9f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#071813]"
                 onClick={() => setMenuOpen(false)}
                 aria-label="Close menu"
               >
