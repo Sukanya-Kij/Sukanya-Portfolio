@@ -1,0 +1,56 @@
+[
+  {
+    "company": "SGS Thailand Ltd.",
+    "role": {
+      "th": "Customer Relationship Management Officer",
+      "en": "Customer Relationship Management Officer"
+    },
+    "period": "Nov 2021 - Present",
+    "bullets": {
+      "th": [
+        "ดูแลความสัมพันธ์ลูกค้าในการขอรับและต่ออายุใบรับรองมาตรฐาน",
+        "เป็นตัวกลางประสานงานระหว่างลูกค้าและทีมภายใน รวมถึง Auditor",
+        "ติดตามสถานะงาน เอกสาร และ timeline ผ่านระบบ CRM",
+        "ให้ข้อมูลขั้นตอนและติดตามเอกสารที่จำเป็นจนงานเสร็จตามกำหนด"
+      ],
+      "en": [
+        "Managed customer relationships for certification issuance and renewal processes",
+        "Acted as a communication bridge between customers, internal teams, and auditors",
+        "Tracked task status, pending documents, and timelines using CRM workflows",
+        "Provided procedural guidance and ensured smooth end-to-end process completion"
+      ]
+    },
+    "achievements": {
+      "th": [
+        "รักษาอัตราการต่ออายุใบรับรองมากกว่า 90%",
+        "ออกแบบและนำทีมพัฒนา CRM Auto-Alert ลดงานบันทึกซ้ำมากกว่า 30%",
+        "ได้รับ Top Sale Award ต่อเนื่อง 2 ปี และ Team Innovation Award"
+      ],
+      "en": [
+        "Maintained certificate renewal retention above 90%",
+        "Led CRM Auto-Alert implementation that reduced repetitive data entry by over 30%",
+        "Received Top Sale Award for 2 consecutive years and Team Innovation Award"
+      ]
+    }
+  },
+  {
+    "company": "San E.68 Consulting Engineers Co., Ltd.",
+    "role": {
+      "th": "Chemist",
+      "en": "Chemist / Laboratory Scientist"
+    },
+    "period": "Aug 2021 - Nov 2021",
+    "bullets": {
+      "th": [
+        "ปฏิบัติการทดสอบและวิเคราะห์คุณภาพน้ำ",
+        "จัดทำ control chart เพื่อติดตามค่าพารามิเตอร์ด้านสิ่งแวดล้อม",
+        "สนับสนุนการสอบเทียบและบำรุงรักษาเครื่องมือวิทยาศาสตร์ประจำปี"
+      ],
+      "en": [
+        "Performed laboratory testing and water quality analysis",
+        "Documented control charts and monitored key environmental parameters",
+        "Supported calibration and maintenance schedules for laboratory instruments"
+      ]
+    }
+  }
+]

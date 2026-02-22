@@ -1,0 +1,124 @@
+[
+  {
+    "slug": "crm-auto-alert",
+    "title": {
+      "th": "CRM Auto-Alert Workflow",
+      "en": "CRM Auto-Alert Workflow"
+    },
+    "role": {
+      "th": "Project Lead และ Process Coordinator",
+      "en": "Project Lead and Process Coordinator"
+    },
+    "context": {
+      "th": "ในงาน CRM มีการรับอีเมลลูกค้าจำนวนมากและเกิดงานบันทึกข้อมูลซ้ำซ้อน",
+      "en": "High-volume customer email intake in CRM operations created repetitive manual logging tasks."
+    },
+    "challenge": {
+      "th": "ต้องลดเวลางานซ้ำโดยไม่ลดความถูกต้องของข้อมูล และยังตอบสนองลูกค้าได้เร็วขึ้น",
+      "en": "Reduce repetitive processing time without sacrificing data accuracy, while improving response speed."
+    },
+    "tools": {
+      "th": [
+        "CRM process mapping",
+        "Auto-alert rule design",
+        "Cross-team workflow coordination"
+      ],
+      "en": [
+        "CRM process mapping",
+        "Auto-alert rule design",
+        "Cross-team workflow coordination"
+      ]
+    },
+    "actions": {
+      "th": [
+        "วิเคราะห์จุดคอขวดของขั้นตอนรับอีเมลและการบันทึกข้อมูล",
+        "ออกแบบ logic การแจ้งเตือนอัตโนมัติและลำดับการติดตามงาน",
+        "ประสานทีมที่เกี่ยวข้องเพื่อทดลองใช้งานและปรับ flow"
+      ],
+      "en": [
+        "Mapped bottlenecks in email intake and logging processes",
+        "Designed automated alert logic and follow-up sequencing",
+        "Coordinated pilots with related teams and refined the workflow"
+      ]
+    },
+    "outcomes": {
+      "th": [
+        "ลดงานบันทึกข้อมูลซ้ำมากกว่า 30%",
+        "เพิ่มความเร็วในการตอบสนองลูกค้า",
+        "ได้รับ Team Innovation Award"
+      ],
+      "en": [
+        "Reduced repetitive data entry workload by over 30%",
+        "Improved customer response speed",
+        "Recognized with a Team Innovation Award"
+      ]
+    },
+    "evidenceType": {
+      "th": "Process metrics และรางวัลทีม",
+      "en": "Process metrics and team award"
+    },
+    "tags": ["CRM", "Automation", "Operations"],
+    "featured": true
+  },
+  {
+    "slug": "retention-and-iso-coordination",
+    "title": {
+      "th": "Client Retention & ISO Coordination",
+      "en": "Client Retention & ISO Coordination"
+    },
+    "role": {
+      "th": "Customer Relationship Management Officer",
+      "en": "Customer Relationship Management Officer"
+    },
+    "context": {
+      "th": "ต้องดูแลลูกค้าองค์กรที่ต้องต่ออายุใบรับรองมาตรฐานภายใต้ timeline ที่เข้มงวด",
+      "en": "Enterprise customers required certification renewals under strict audit timelines."
+    },
+    "challenge": {
+      "th": "ต้องประสานลูกค้า ทีมภายใน และ Auditor หลายฝ่ายพร้อมกันให้ตรวจประเมินเสร็จตรงเวลา",
+      "en": "Coordinate customers, internal teams, and auditors concurrently to complete audits on schedule."
+    },
+    "tools": {
+      "th": [
+        "CRM status tracking",
+        "Document follow-up checklists",
+        "Audit schedule coordination"
+      ],
+      "en": [
+        "CRM status tracking",
+        "Document follow-up checklists",
+        "Audit schedule coordination"
+      ]
+    },
+    "actions": {
+      "th": [
+        "จัดลำดับความสำคัญของงานและติดตามเอกสารค้างรายลูกค้า",
+        "สื่อสารความคืบหน้าเชิงรุกกับลูกค้าและทีมภายใน",
+        "วางแผนตารางร่วมกับ Auditor เพื่อหลีกเลี่ยงคอขวด"
+      ],
+      "en": [
+        "Prioritized tasks and tracked pending customer documentation",
+        "Maintained proactive communication with customers and internal teams",
+        "Planned audit schedules with auditors to avoid timeline bottlenecks"
+      ]
+    },
+    "outcomes": {
+      "th": [
+        "รักษาอัตราการต่ออายุใบรับรองมากกว่า 90%",
+        "บรรลุเป้าหมายรายเดือนทั้งด้านรายได้และการรักษาลูกค้า",
+        "ได้รับ Top Sale Award ต่อเนื่อง 2 ปี"
+      ],
+      "en": [
+        "Sustained certificate renewal retention above 90%",
+        "Consistently met monthly revenue and retention goals",
+        "Received Top Sale Award for two consecutive years"
+      ]
+    },
+    "evidenceType": {
+      "th": "Retention KPI และรางวัลรายปี",
+      "en": "Retention KPI and annual recognition"
+    },
+    "tags": ["Customer Success", "ISO", "Retention"],
+    "featured": true
+  }
+]

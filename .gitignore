@@ -23,6 +23,8 @@
 # misc
 .DS_Store
 *.pem
+/Sukanya resume01.pdf
+/Sukanya resume02.pdf
 
 # debug
 npm-debug.log*

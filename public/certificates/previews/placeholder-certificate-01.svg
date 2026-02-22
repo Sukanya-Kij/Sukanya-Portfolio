@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Certificate placeholder one">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ecfeff"/>
+      <stop offset="100%" stop-color="#cffafe"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g1)"/>
+  <rect x="40" y="40" width="1120" height="720" rx="32" fill="#ffffff" stroke="#0f766e" stroke-width="3"/>
+  <text x="600" y="280" text-anchor="middle" font-family="Kanit, sans-serif" font-size="58" fill="#0f172a">Certificate Placeholder 01</text>
+  <text x="600" y="360" text-anchor="middle" font-family="Kanit, sans-serif" font-size="30" fill="#334155">Upload final file when ready</text>
+  <text x="600" y="430" text-anchor="middle" font-family="Kanit, sans-serif" font-size="24" fill="#0f766e">Category: Quality Management</text>
+</svg>

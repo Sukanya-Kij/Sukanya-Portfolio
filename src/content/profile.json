@@ -1,0 +1,50 @@
+{
+  "fullName": "Sukanya Kijjapalo",
+  "nickname": "Fern",
+  "title": {
+    "th": "Coordination & Operations Support Professional",
+    "en": "Coordination & Operations Support Professional"
+  },
+  "summary": {
+    "th": "มีประสบการณ์มากกว่า 4 ปีในการประสานงานลูกค้า การติดตามเอกสาร และการบริหาร timeline ในระบบงานที่มีโครงสร้าง โดยเฉพาะงานออกและต่ออายุใบรับรองมาตรฐาน เช่น ISO 9001, ISO 14001, ISO 45001, FSSC 22000 และ BRCGS",
+    "en": "Coordination and operations support professional with 4+ years of experience managing customer requests, document follow-up, and timeline tracking in structured systems, especially for certification workflows such as ISO 9001, ISO 14001, ISO 45001, FSSC 22000, and BRCGS."
+  },
+  "email": "meemakham@gmail.com",
+  "skills": {
+    "th": [
+      "Project coordination และ customer communication",
+      "Client negotiation และ retention",
+      "Task และ timeline management",
+      "Document tracking ในระบบ CRM",
+      "ISO standards knowledge (9001/14001/45001/FSSC22000/BRCGS)",
+      "Problem-solving และ analytical thinking"
+    ],
+    "en": [
+      "Project coordination and customer communication",
+      "Client negotiation and retention",
+      "Task and timeline management",
+      "CRM-based document tracking",
+      "ISO standards knowledge (9001/14001/45001/FSSC22000/BRCGS)",
+      "Problem-solving and analytical thinking"
+    ]
+  },
+  "languages": [
+    {
+      "name": "English",
+      "level": {
+        "th": "ระดับ Professional Working Proficiency (มีระบุระดับ Intermediate ในเรซูเม่ก่อนหน้า)",
+        "en": "Professional Working Proficiency (earlier resume version mentions intermediate)"
+      }
+    }
+  ],
+  "education": [
+    {
+      "degree": {
+        "th": "วิทยาศาสตรบัณฑิต สาขาเคมีสิ่งแวดล้อม",
+        "en": "Bachelor of Science in Environmental Chemistry"
+      },
+      "institution": "King Mongkut’s Institute of Technology Ladkrabang",
+      "period": "2018 - 2021"
+    }
+  ]
+}
