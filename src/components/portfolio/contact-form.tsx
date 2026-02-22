@@ -52,51 +52,58 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="reveal premium-card space-y-4 p-6">
-      <label className="block text-sm font-medium text-emerald-900/90">
-        {ui.contact.formName}
-        <input
-          required
-          value={state.name}
-          onChange={(event) => updateField("name", event.target.value)}
-          className="mt-1 w-full min-h-[44px] rounded-xl border border-emerald-200 px-4 py-2"
-          maxLength={120}
-        />
-      </label>
+    <form onSubmit={onSubmit} className="space-y-5 p-8 sm:p-10">
+      <div className="mb-8">
+        <h2 className="heading-luxe text-3xl text-emerald-950 mb-2">Send a Message</h2>
+        <p className="text-sm text-emerald-800/80 font-medium">I&apos;m currently available for new opportunities.</p>
+      </div>
 
-      <label className="block text-sm font-medium text-emerald-900/90">
-        {ui.contact.formEmail}
-        <input
-          type="email"
-          required
-          value={state.email}
-          onChange={(event) => updateField("email", event.target.value)}
-          className="mt-1 w-full min-h-[44px] rounded-xl border border-emerald-200 px-4 py-2"
-          maxLength={180}
-        />
-      </label>
+      <div className="space-y-5">
+        <label className="block text-sm font-semibold tracking-wide uppercase text-[#b89555]">
+          {ui.contact.formName}
+          <input
+            required
+            value={state.name}
+            onChange={(event) => updateField("name", event.target.value)}
+            className="mt-2 w-full min-h-[48px] rounded-xl border border-emerald-200/60 bg-white/50 px-4 py-3 text-emerald-950 placeholder-emerald-900/40 focus:border-[#c8a96f] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#c8a96f]/50 transition-all shadow-sm"
+            maxLength={120}
+          />
+        </label>
 
-      <label className="block text-sm font-medium text-emerald-900/90">
-        {ui.contact.formSubject}
-        <input
-          required
-          value={state.subject}
-          onChange={(event) => updateField("subject", event.target.value)}
-          className="mt-1 w-full min-h-[44px] rounded-xl border border-emerald-200 px-4 py-2"
-          maxLength={160}
-        />
-      </label>
+        <label className="block text-sm font-semibold tracking-wide uppercase text-[#b89555]">
+          {ui.contact.formEmail}
+          <input
+            type="email"
+            required
+            value={state.email}
+            onChange={(event) => updateField("email", event.target.value)}
+            className="mt-2 w-full min-h-[48px] rounded-xl border border-emerald-200/60 bg-white/50 px-4 py-3 text-emerald-950 placeholder-emerald-900/40 focus:border-[#c8a96f] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#c8a96f]/50 transition-all shadow-sm"
+            maxLength={180}
+          />
+        </label>
 
-      <label className="block text-sm font-medium text-emerald-900/90">
-        {ui.contact.formMessage}
-        <textarea
-          required
-          value={state.message}
-          onChange={(event) => updateField("message", event.target.value)}
-          className="mt-1 min-h-[144px] w-full rounded-xl border border-emerald-200 px-4 py-3"
-          maxLength={3000}
-        />
-      </label>
+        <label className="block text-sm font-semibold tracking-wide uppercase text-[#b89555]">
+          {ui.contact.formSubject}
+          <input
+            required
+            value={state.subject}
+            onChange={(event) => updateField("subject", event.target.value)}
+            className="mt-2 w-full min-h-[48px] rounded-xl border border-emerald-200/60 bg-white/50 px-4 py-3 text-emerald-950 placeholder-emerald-900/40 focus:border-[#c8a96f] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#c8a96f]/50 transition-all shadow-sm"
+            maxLength={160}
+          />
+        </label>
+
+        <label className="block text-sm font-semibold tracking-wide uppercase text-[#b89555]">
+          {ui.contact.formMessage}
+          <textarea
+            required
+            value={state.message}
+            onChange={(event) => updateField("message", event.target.value)}
+            className="mt-2 min-h-[160px] w-full rounded-xl border border-emerald-200/60 bg-white/50 px-4 py-3 text-emerald-950 placeholder-emerald-900/40 focus:border-[#c8a96f] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#c8a96f]/50 transition-all shadow-sm resize-y"
+            maxLength={3000}
+          />
+        </label>
+      </div>
 
       <label className="hidden" aria-hidden="true">
         Website
@@ -106,13 +113,29 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="btn-primary min-h-11 rounded-xl bg-emerald-800 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-900 disabled:opacity-50"
+        className="btn-primary mt-6 w-full min-h-[52px] rounded-xl bg-gradient-to-r from-[#c8a96f] to-[#b89555] px-6 py-3.5 text-sm font-bold tracking-wider text-emerald-950 shadow-lg shadow-[#c8a96f]/20 hover:shadow-[#c8a96f]/40 transition-all disabled:opacity-50 flex justify-center items-center gap-2"
       >
-        {status === "submitting" ? ui.contact.submitting : ui.contact.submit}
+        {status === "submitting" ? (
+          <>
+            <div className="h-4 w-4 rounded-full border-2 border-emerald-950/20 border-t-emerald-950 animate-spin"></div>
+            {ui.contact.submitting}
+          </>
+        ) : ui.contact.submit}
       </button>
 
-      {status === "success" ? <p className="text-sm text-emerald-700">{ui.contact.success}</p> : null}
-      {status === "error" ? <p className="text-sm text-rose-700">{ui.contact.error}</p> : null}
+      {status === "success" ? (
+        <div className="mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 flex gap-3 text-emerald-800">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0 text-emerald-600" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+          <p className="text-sm font-medium">{ui.contact.success}</p>
+        </div>
+      ) : null}
+
+      {status === "error" ? (
+        <div className="mt-4 p-4 rounded-xl bg-rose-50 border border-rose-200 flex gap-3 text-rose-800">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0 text-rose-600" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" /></svg>
+          <p className="text-sm font-medium">{ui.contact.error}</p>
+        </div>
+      ) : null}
     </form>
   );
 }
