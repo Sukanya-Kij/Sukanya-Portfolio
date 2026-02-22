@@ -1,11 +1,16 @@
 # Sukanya Kijjapalo Portfolio
 
-Bilingual portfolio website (Thai/English) built with Next.js App Router.
+English-first portfolio website with Thai support, built with Next.js App Router.
+
+## Project purpose
+- Present Sukanya Kijjapalo (Fern) with a professional portfolio for recruiters and clients.
+- Keep resume data, project metrics, and certificate records accurate and auditable from source resume files.
+- Provide reliable contact and downloadable resume access from public pages.
 
 ## Stack
-- Next.js 16 + TypeScript
+- Next.js 15 + TypeScript
 - Tailwind CSS v4
-- Route-based locale pages: `/th/*`, `/en/*`
+- Single route set: `/`, `/about`, `/projects`, `/certificates`, `/contact`
 
 ## Run locally
 ```bash
@@ -26,11 +31,23 @@ npm run build
 - `src/content/experience.json`
 - `src/content/projects.json`
 - `src/content/certificates.json`
+- `src/content/media-library.json` (image catalog and usage categories)
 - `content-notes.md` (resume reconciliation notes)
+
+## Resume download
+- Public resume files:
+  - `public/resume/sukanya-kijjapalo-resume-v02-latest.pdf`
+  - `public/resume/sukanya-kijjapalo-resume-v01.pdf`
+- (Available directly via these paths or downloaded from section features)
 
 ## Certificates assets
 - Place PDF files in `public/certificates/`
 - Place preview images in `public/certificates/previews/`
+
+## QA priority
+- Function correctness first: page routes, filters, forms, preview modals, and downloads.
+- Data accuracy first: claims, dates, names, and KPI values must match resume source files.
+- Full pre-release checklist: `docs/project-quality-plan.md`
 
 ## Contact form
 The API route is at `src/app/api/contact/route.ts`.

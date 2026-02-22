@@ -1,40 +1,30 @@
 [
   {
-    "id": "cert-placeholder-1",
+    "id": "top-crm-executive-2025",
     "title": {
-      "th": "Certificate Placeholder 01",
-      "en": "Certificate Placeholder 01"
+      "th": "Top CRM Executive Recognition 2025",
+      "en": "Top CRM Executive Recognition 2025"
     },
-    "issuer": "Pending Upload",
-    "issueDate": "2026-01",
-    "category": "quality-management",
-    "fileUrl": "/certificates/placeholder-certificate-01.pdf",
-    "previewImage": "/certificates/previews/placeholder-certificate-01.svg",
+    "issuer": "SGS Thailand Ltd.",
+    "issueDate": "2025",
+    "category": "sales-recognition",
+    "fileUrl": "/images/achievements/sgs-top-crm-executive-2025.jpg",
+    "previewImage": "/images/achievements/sgs-top-crm-executive-2025.jpg",
     "featured": true,
-    "placeholder": true
+    "placeholder": false
   },
   {
-    "id": "cert-placeholder-2",
+    "id": "crm-auto-alert-certificate-2023",
     "title": {
-      "th": "Certificate Placeholder 02",
-      "en": "Certificate Placeholder 02"
+      "th": "Certificate of Recognition: CRM Auto Alert",
+      "en": "Certificate of Recognition: CRM Auto Alert"
     },
-    "issuer": "Pending Upload",
-    "issueDate": "2025-12",
-    "category": "safety",
-    "previewImage": "/certificates/previews/placeholder-certificate-02.svg",
-    "placeholder": true
-  },
-  {
-    "id": "cert-placeholder-3",
-    "title": {
-      "th": "Certificate Placeholder 03",
-      "en": "Certificate Placeholder 03"
-    },
-    "issuer": "Pending Upload",
-    "issueDate": "2025-11",
-    "category": "operations",
-    "previewImage": "/certificates/previews/placeholder-certificate-03.svg",
-    "placeholder": true
+    "issuer": "SGS (Thailand) Limited",
+    "issueDate": "2023",
+    "category": "innovation",
+    "fileUrl": "/images/certificates/sgs-certificate-crm-auto-alert-2023.jpg",
+    "previewImage": "/images/certificates/sgs-certificate-crm-auto-alert-2023.jpg",
+    "featured": true,
+    "placeholder": false
   }
 ]

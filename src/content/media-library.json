@@ -1,0 +1,78 @@
+{
+  "version": "2026-02-22",
+  "basePath": "/images",
+  "assets": [
+    {
+      "id": "person-formal-boardroom",
+      "file": "/images/people/formal/fern-boardroom-professional.jpg",
+      "type": "person",
+      "style": "formal",
+      "category": "people/formal",
+      "recommendedSections": ["home-hero", "experience-hero", "about-profile"],
+      "sourceOriginalFile": "Sukanya-01.JPG"
+    },
+    {
+      "id": "person-formal-office-smile",
+      "file": "/images/people/formal/fern-office-portrait-smile.jpg",
+      "type": "person",
+      "style": "formal",
+      "category": "people/formal",
+      "recommendedSections": ["about-profile", "contact", "bio-card"],
+      "sourceOriginalFile": "Sukanya-03.jpg"
+    },
+    {
+      "id": "person-formal-office-contact",
+      "file": "/images/people/formal/fern-office-portrait-contact.jpg",
+      "type": "person",
+      "style": "formal",
+      "category": "people/formal",
+      "recommendedSections": ["contact", "sidebar-profile"],
+      "sourceOriginalFile": "Sukanya-05.jpg"
+    },
+    {
+      "id": "person-casual-city-night",
+      "file": "/images/people/casual/fern-city-night-casual.jpg",
+      "type": "person",
+      "style": "casual",
+      "category": "people/casual",
+      "recommendedSections": ["personal-brand", "gallery-casual", "about-extra"],
+      "sourceOriginalFile": "Sukanya-04.jpg"
+    },
+    {
+      "id": "person-casual-office-peace",
+      "file": "/images/people/casual/fern-office-portrait-peace.jpg",
+      "type": "person",
+      "style": "casual",
+      "category": "people/casual",
+      "recommendedSections": ["gallery-casual", "personal-note"],
+      "sourceOriginalFile": "Sukanya-03 (1).jpg"
+    },
+    {
+      "id": "achievement-team-recognition-stage",
+      "file": "/images/achievements/sgs-team-recognition-stage.jpg",
+      "type": "achievement",
+      "style": "work-event",
+      "category": "achievements",
+      "recommendedSections": ["home-achievements", "experience", "projects-evidence"],
+      "sourceOriginalFile": "Sukanya-02.jpg"
+    },
+    {
+      "id": "achievement-top-crm-executive-2025",
+      "file": "/images/achievements/sgs-top-crm-executive-2025.jpg",
+      "type": "achievement",
+      "style": "award-proof",
+      "category": "achievements",
+      "recommendedSections": ["projects-evidence", "certificates", "results-highlight"],
+      "sourceOriginalFile": "S__32849931.jpg"
+    },
+    {
+      "id": "certificate-crm-auto-alert-2023",
+      "file": "/images/certificates/sgs-certificate-crm-auto-alert-2023.jpg",
+      "type": "certificate",
+      "style": "document-proof",
+      "category": "certificates",
+      "recommendedSections": ["certificates", "projects-evidence", "home-proof-card"],
+      "sourceOriginalFile": "S__32849940.jpg"
+    }
+  ]
+}

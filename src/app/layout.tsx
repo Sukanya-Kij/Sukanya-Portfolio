@@ -1,11 +1,27 @@
 import type { Metadata } from "next";
-import { Fira_Code, Kanit } from "next/font/google";
+import { Cormorant_Garamond, Fira_Code, Manrope, Noto_Sans_Thai } from "next/font/google";
+import { MotionOrchestrator } from "@/components/portfolio/motion-orchestrator";
+import { SiteFooter } from "@/components/portfolio/site-footer";
+import { SiteHeader } from "@/components/portfolio/site-header";
+import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
-const kanit = Kanit({
-  variable: "--font-kanit",
-  subsets: ["latin", "thai"],
-  weight: ["300", "400", "500", "700"],
+const bodyLatin = Manrope({
+  variable: "--font-body-latin",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const bodyThai = Noto_Sans_Thai({
+  variable: "--font-body-thai",
+  subsets: ["thai"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const headingFont = Cormorant_Garamond({
+  variable: "--font-heading",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
 });
 
 const firaCode = Fira_Code({
@@ -14,7 +30,7 @@ const firaCode = Fira_Code({
   weight: ["400", "500"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -23,13 +39,20 @@ export const metadata: Metadata = {
     template: "%s | Sukanya Kijjapalo",
   },
   description:
-    "Portfolio of Sukanya Kijjapalo (Fern): coordination, CRM operations, certification workflow, and measurable business outcomes.",
+    "Portfolio of Sukanya Kijjapalo (Fern): coordination, CRM operations, certification workflow, and measurable outcomes.",
   openGraph: {
     title: "Sukanya Kijjapalo | Portfolio",
-    description:
-      "Coordination and operations portfolio with experience, projects, and certificate repository.",
+    description: "Professional portfolio with certifications, client activity highlights, and project outcomes.",
     type: "website",
     siteName: "Sukanya Kijjapalo Portfolio",
+    images: [
+      {
+        url: "/images/people/formal/fern-boardroom-professional.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Sukanya Kijjapalo professional portrait",
+      },
+    ],
   },
 };
 
@@ -39,8 +62,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="th">
-      <body className={`${kanit.variable} ${firaCode.variable} antialiased`}>{children}</body>
+    <html lang="en">
+      <body className={`${bodyLatin.variable} ${bodyThai.variable} ${headingFont.variable} ${firaCode.variable} antialiased`}>
+        <MotionOrchestrator />
+        <div className="app-shell flex min-h-screen flex-col">
+          <SiteHeader />
+          <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6 lg:px-8">{children}</main>
+          <SiteFooter />
+        </div>
+      </body>
     </html>
   );
 }

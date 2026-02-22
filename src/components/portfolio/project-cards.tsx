@@ -1,71 +1,93 @@
-import { getDictionary } from "@/lib/i18n";
-import type { Locale, ProjectItem } from "@/lib/types";
+import Image from "next/image";
+import { primary, ui } from "@/lib/i18n";
+import type { ProjectItem } from "@/lib/types";
 
-export function ProjectCards({ locale, items }: { locale: Locale; items: ProjectItem[] }) {
-  const dict = getDictionary(locale);
+const projectImages: Record<string, { src: string; alt: string }> = {
+  "crm-auto-alert": {
+    src: "/images/certificates/sgs-certificate-crm-auto-alert-2023.jpg",
+    alt: "CRM Auto Alert certificate of recognition",
+  },
+  "retention-and-iso-coordination": {
+    src: "/images/achievements/sgs-top-crm-executive-2025.jpg",
+    alt: "Top CRM Executive recognition board for Sukanya",
+  },
+};
 
+export function ProjectCards({ items }: { items: ProjectItem[] }) {
   return (
     <div className="grid gap-6">
       {items.map((project) => (
-        <article key={project.slug} className="reveal rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <div className="flex flex-wrap items-center gap-2">
-            {project.tags.map((tag) => (
-              <span key={tag} className="rounded-full bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-800">
-                {tag}
-              </span>
-            ))}
-          </div>
+        <article key={project.slug} className="reveal premium-card overflow-hidden p-0">
+          {projectImages[project.slug] ? (
+            <Image
+              src={projectImages[project.slug].src}
+              alt={projectImages[project.slug].alt}
+              width={1200}
+              height={700}
+              className="media-lift h-56 w-full object-cover"
+            />
+          ) : null}
 
-          <h2 className="mt-4 text-2xl font-bold text-slate-900">{project.title[locale]}</h2>
-
-          <div className="mt-5 grid gap-4 text-sm text-slate-700 md:grid-cols-2">
-            <div>
-              <h3 className="font-semibold text-slate-900">{dict.projects.role}</h3>
-              <p className="mt-1">{project.role[locale]}</p>
+          <div className="p-6">
+            <div className="flex flex-wrap items-center gap-2">
+              {project.tags.map((tag) => (
+                <span key={tag} className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800">
+                  {tag}
+                </span>
+              ))}
             </div>
-            <div>
-              <h3 className="font-semibold text-slate-900">{dict.projects.evidenceType}</h3>
-              <p className="mt-1">{project.evidenceType[locale]}</p>
+
+            <h2 className="heading-luxe mt-4 text-4xl leading-tight text-emerald-950">{primary(project.title)}</h2>
+
+            <div className="mt-5 grid gap-4 text-sm text-emerald-900/85 md:grid-cols-2">
+              <div>
+                <h3 className="font-semibold text-emerald-950">{ui.projects.role}</h3>
+                <p className="mt-1">{primary(project.role)}</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-emerald-950">{ui.projects.evidenceType}</h3>
+                <p className="mt-1">{primary(project.evidenceType)}</p>
+              </div>
             </div>
-          </div>
 
-          <div className="mt-5 space-y-5 text-sm text-slate-700">
-            <section>
-              <h3 className="font-semibold text-slate-900">{dict.projects.context}</h3>
-              <p className="mt-1">{project.context[locale]}</p>
-            </section>
+            <div className="mt-5 space-y-5 text-sm text-emerald-900/85">
+              <section>
+                <h3 className="font-semibold text-emerald-950">{ui.projects.context}</h3>
+                <p className="mt-1">{primary(project.context)}</p>
+              </section>
 
-            <section>
-              <h3 className="font-semibold text-slate-900">{dict.projects.challenge}</h3>
-              <p className="mt-1">{project.challenge[locale]}</p>
-            </section>
+              <section>
+                <h3 className="font-semibold text-emerald-950">{ui.projects.challenge}</h3>
+                <p className="mt-1">{primary(project.challenge)}</p>
+              </section>
 
-            <section>
-              <h3 className="font-semibold text-slate-900">{dict.projects.tools}</h3>
-              <ul className="mt-1 list-disc space-y-1 pl-5">
-                {project.tools[locale].map((tool) => (
-                  <li key={tool}>{tool}</li>
-                ))}
-              </ul>
-            </section>
+              <section>
+                <h3 className="font-semibold text-emerald-950">{ui.projects.tools}</h3>
+                <ul className="mt-1 list-disc space-y-1 pl-5">
+                  {project.tools.en.map((tool) => (
+                    <li key={tool}>{tool}</li>
+                  ))}
+                </ul>
+              </section>
 
-            <section>
-              <h3 className="font-semibold text-slate-900">{dict.projects.actions}</h3>
-              <ul className="mt-1 list-disc space-y-1 pl-5">
-                {project.actions[locale].map((action) => (
-                  <li key={action}>{action}</li>
-                ))}
-              </ul>
-            </section>
+              <section>
+                <h3 className="font-semibold text-emerald-950">{ui.projects.actions}</h3>
+                <ul className="mt-1 list-disc space-y-1 pl-5">
+                  {project.actions.en.map((action) => (
+                    <li key={action}>{action}</li>
+                  ))}
+                </ul>
+              </section>
 
-            <section>
-              <h3 className="font-semibold text-slate-900">{dict.projects.outcomes}</h3>
-              <ul className="mt-1 list-disc space-y-1 pl-5">
-                {project.outcomes[locale].map((outcome) => (
-                  <li key={outcome}>{outcome}</li>
-                ))}
-              </ul>
-            </section>
+              <section>
+                <h3 className="font-semibold text-emerald-950">{ui.projects.outcomes}</h3>
+                <ul className="mt-1 list-disc space-y-1 pl-5">
+                  {project.outcomes.en.map((outcome) => (
+                    <li key={outcome}>{outcome}</li>
+                  ))}
+                </ul>
+              </section>
+            </div>
           </div>
         </article>
       ))}

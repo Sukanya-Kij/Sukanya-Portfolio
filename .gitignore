@@ -25,6 +25,8 @@
 *.pem
 /Sukanya resume01.pdf
 /Sukanya resume02.pdf
+/Sukanya-*.jpg
+/Sukanya-*.JPG
 
 # debug
 npm-debug.log*

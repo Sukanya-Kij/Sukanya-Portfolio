@@ -1,246 +1,149 @@
-import type { Locale } from "@/lib/types";
+import type { LocalizedText, Locale } from "@/lib/types";
 
-export const locales: Locale[] = ["th", "en"];
-export const defaultLocale: Locale = "th";
-
-export function isLocale(value: string): value is Locale {
-  return locales.includes(value as Locale);
-}
+export const primaryLocale: Locale = "en";
 
 export const navItems = [
-  { href: "", key: "home" },
-  { href: "/about", key: "about" },
-  { href: "/experience", key: "experience" },
-  { href: "/projects", key: "projects" },
-  { href: "/certificates", key: "certificates" },
-  { href: "/contact", key: "contact" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About & Experience" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
-export type Dictionary = {
-  brand: string;
-  nav: Record<(typeof navItems)[number]["key"], string>;
+export const ui = {
+  brand: "Sukanya Kijjapalo (Fern)",
+  role: {
+    en: "Coordination & Operations Support Professional",
+    th: "ผู้เชี่ยวชาญด้านการประสานงานและสนับสนุนงานปฏิบัติการ",
+  },
   home: {
-    introLabel: string;
-    ctaExperience: string;
-    ctaProjects: string;
-    ctaCertificates: string;
-    keyHighlights: string;
-    yearsExp: string;
-    metricRenewal: string;
-    metricAutomation: string;
-  };
+    intro: {
+      en: "Driving smooth certification operations with accuracy, clarity, and strong client coordination.",
+      th: "ขับเคลื่อนงานด้านใบรับรองให้ราบรื่นด้วยความแม่นยำ การสื่อสารที่ชัดเจน และการดูแลลูกค้าอย่างเป็นระบบ",
+    },
+    ctaExperience: "Explore Experience",
+    ctaPortfolio: "View Portfolio",
+    highlights: "Key Highlights",
+    yearsExp: {
+      en: "4+ years of coordination and CRM operations experience",
+      th: "ประสบการณ์มากกว่า 4 ปีในงานประสานงานและ CRM operations",
+    },
+    metricRenewal: {
+      en: "Over 90% certificate renewal retention",
+      th: "รักษาอัตราต่ออายุใบรับรองมากกว่า 90%",
+    },
+    metricAutomation: {
+      en: "CRM Auto-Alert reduced repetitive work by over 30%",
+      th: "ระบบ CRM Auto-Alert ลดงานซ้ำได้มากกว่า 30%",
+    },
+  },
+  portfolio: {
+    title: "Portfolio",
+    subtitle: "Certificates, client visits, and project outcomes in one place.",
+    certificatesTitle: "Certificates Received",
+    activitiesTitle: "Client Visits and Certificate Handover",
+    projectsTitle: "Project Highlights",
+    issuedLabel: "Issued",
+    view: "Open",
+    download: "Download",
+  },
   about: {
-    title: string;
-    summaryTitle: string;
-    skillsTitle: string;
-    educationTitle: string;
-    languagesTitle: string;
-  };
+    title: "About",
+    titleTh: "เกี่ยวกับเฟิร์น",
+    summary: "Professional Summary",
+    summaryTh: "สรุปประสบการณ์การทำงาน",
+    skills: "Core Skills",
+    skillsTh: "ทักษะหลัก",
+    education: "Education",
+    educationTh: "การศึกษา",
+    languages: "Language",
+    languagesTh: "ภาษา",
+  },
   experience: {
-    title: string;
-    subtitle: string;
-    achievements: string;
-  };
+    title: "Experience",
+    titleTh: "ประสบการณ์การทำงาน",
+    subtitle: "Career journey across laboratory operations, customer coordination, and certification workflow management.",
+    subtitleTh: "เส้นทางการทำงานตั้งแต่งานห้องปฏิบัติการจนถึงการประสานงานลูกค้าและงานใบรับรองมาตรฐาน",
+    achievements: "Quantified Achievements",
+    achievementsTh: "ผลงานที่วัดผลได้",
+  },
   projects: {
-    title: string;
-    subtitle: string;
-    role: string;
-    context: string;
-    challenge: string;
-    tools: string;
-    actions: string;
-    outcomes: string;
-    evidenceType: string;
-  };
+    title: "Projects",
+    titleTh: "โครงการเด่น",
+    subtitle: "Selected case studies with measurable outcomes.",
+    subtitleTh: "ตัวอย่างผลงานที่มีผลลัพธ์ชัดเจนและวัดผลได้",
+    role: "Role",
+    roleTh: "บทบาท",
+    context: "Context",
+    contextTh: "บริบท",
+    challenge: "Challenge",
+    challengeTh: "โจทย์",
+    tools: "Tools / Process",
+    toolsTh: "เครื่องมือ / กระบวนการ",
+    actions: "Actions",
+    actionsTh: "สิ่งที่ดำเนินการ",
+    outcomes: "Outcomes",
+    outcomesTh: "ผลลัพธ์",
+    evidenceType: "Evidence Type",
+    evidenceTypeTh: "หลักฐานผลงาน",
+  },
   certificates: {
-    title: string;
-    subtitle: string;
-    allCategories: string;
-    allYears: string;
-    preview: string;
-    download: string;
-    placeholder: string;
-    issueDate: string;
-    credentialId: string;
-    category: string;
-    noMatch: string;
-    close: string;
-    previewUnavailable: string;
-  };
+    title: "Certificate Vault",
+    titleTh: "คลังใบรับรอง",
+    subtitle: "A structured repository of certificates and related documents.",
+    subtitleTh: "พื้นที่จัดเก็บใบรับรองและเอกสารประกอบอย่างเป็นระบบ",
+    allCategories: "All categories",
+    allCategoriesTh: "ทุกหมวดหมู่",
+    allYears: "All years",
+    allYearsTh: "ทุกปี",
+    preview: "Preview",
+    previewTh: "ดูตัวอย่าง",
+    download: "Download",
+    downloadTh: "ดาวน์โหลด",
+    placeholder: "Awaiting uploaded file",
+    placeholderTh: "รออัปโหลดไฟล์จริง",
+    issueDate: "Issued",
+    issueDateTh: "วันที่ออก",
+    credentialId: "Credential ID",
+    credentialIdTh: "รหัสใบรับรอง",
+    category: "Category",
+    categoryTh: "หมวดหมู่",
+    noMatch: "No certificates match this filter",
+    noMatchTh: "ไม่พบใบรับรองตามเงื่อนไข",
+    close: "Close",
+    closeTh: "ปิด",
+    previewUnavailable: "Preview is not available yet",
+    previewUnavailableTh: "ยังไม่มีไฟล์ตัวอย่าง",
+  },
   contact: {
-    title: string;
-    subtitle: string;
-    emailLabel: string;
-    formName: string;
-    formEmail: string;
-    formSubject: string;
-    formMessage: string;
-    submit: string;
-    submitting: string;
-    success: string;
-    error: string;
-  };
-  common: {
-    footer: string;
-    localeSwitch: string;
-  };
-};
-
-export const dictionaries: Record<Locale, Dictionary> = {
-  th: {
-    brand: "Sukanya Kijjapalo (Fern)",
-    nav: {
-      home: "หน้าหลัก",
-      about: "เกี่ยวกับ",
-      experience: "ประวัติการทำงาน",
-      projects: "ผลงาน",
-      certificates: "ใบ Certificate",
-      contact: "ติดต่อ",
-    },
-    home: {
-      introLabel: "Coordination & Operations Support Professional",
-      ctaExperience: "ดูประสบการณ์",
-      ctaProjects: "ดูผลงาน",
-      ctaCertificates: "ดู Certificate",
-      keyHighlights: "จุดเด่น",
-      yearsExp: "ประสบการณ์มากกว่า 4 ปี",
-      metricRenewal: "อัตราต่ออายุใบรับรองมากกว่า 90%",
-      metricAutomation: "CRM Auto-Alert ลดงานซ้ำมากกว่า 30%",
-    },
-    about: {
-      title: "เกี่ยวกับ Sukanya",
-      summaryTitle: "Professional Summary",
-      skillsTitle: "ทักษะหลัก",
-      educationTitle: "การศึกษา",
-      languagesTitle: "ภาษา",
-    },
-    experience: {
-      title: "ประวัติการทำงาน",
-      subtitle: "เส้นทางการทำงานด้านห้องปฏิบัติการและการประสานงานลูกค้า",
-      achievements: "ผลงานที่วัดผลได้",
-    },
-    projects: {
-      title: "ผลงานเด่น",
-      subtitle: "Case studies จากการทำงานจริง",
-      role: "บทบาท",
-      context: "บริบท",
-      challenge: "โจทย์",
-      tools: "เครื่องมือ/กระบวนการ",
-      actions: "สิ่งที่ดำเนินการ",
-      outcomes: "ผลลัพธ์",
-      evidenceType: "หลักฐานผลงาน",
-    },
-    certificates: {
-      title: "คลัง Certificate",
-      subtitle: "จัดเก็บใบรับรองและเอกสารประกอบแบบค้นหาได้",
-      allCategories: "ทุกหมวดหมู่",
-      allYears: "ทุกปี",
-      preview: "ดูตัวอย่าง",
-      download: "ดาวน์โหลด",
-      placeholder: "รออัปโหลดไฟล์จริง",
-      issueDate: "ออกเมื่อ",
-      credentialId: "Credential ID",
-      category: "หมวดหมู่",
-      noMatch: "ไม่พบรายการที่ตรงกับเงื่อนไข",
-      close: "ปิด",
-      previewUnavailable: "ยังไม่มีตัวอย่างไฟล์",
-    },
-    contact: {
-      title: "ติดต่อ",
-      subtitle: "สามารถติดต่อผ่านอีเมลหรือส่งข้อความผ่านฟอร์ม",
-      emailLabel: "อีเมล",
-      formName: "ชื่อ",
-      formEmail: "อีเมล",
-      formSubject: "หัวข้อ",
-      formMessage: "ข้อความ",
-      submit: "ส่งข้อความ",
-      submitting: "กำลังส่ง...",
-      success: "ส่งข้อความเรียบร้อยแล้ว",
-      error: "ไม่สามารถส่งข้อความได้ กรุณาลองใหม่",
-    },
-    common: {
-      footer: "Portfolio ของ Sukanya Kijjapalo",
-      localeSwitch: "ภาษา",
-    },
+    title: "Contact",
+    titleTh: "ติดต่อ",
+    subtitle: "Reach out by email or send a message via the form.",
+    subtitleTh: "สามารถติดต่อผ่านอีเมลหรือส่งข้อความผ่านฟอร์ม",
+    emailLabel: "Email",
+    emailLabelTh: "อีเมล",
+    formName: "Name",
+    formNameTh: "ชื่อ",
+    formEmail: "Email",
+    formEmailTh: "อีเมล",
+    formSubject: "Subject",
+    formSubjectTh: "หัวข้อ",
+    formMessage: "Message",
+    formMessageTh: "ข้อความ",
+    submit: "Send Message",
+    submitTh: "ส่งข้อความ",
+    submitting: "Sending...",
+    submittingTh: "กำลังส่ง...",
+    success: "Message sent successfully",
+    successTh: "ส่งข้อความเรียบร้อยแล้ว",
+    error: "Message could not be sent. Please try again.",
+    errorTh: "ไม่สามารถส่งข้อความได้ กรุณาลองใหม่",
   },
-  en: {
-    brand: "Sukanya Kijjapalo (Fern)",
-    nav: {
-      home: "Home",
-      about: "About",
-      experience: "Experience",
-      projects: "Projects",
-      certificates: "Certificates",
-      contact: "Contact",
-    },
-    home: {
-      introLabel: "Coordination & Operations Support Professional",
-      ctaExperience: "View Experience",
-      ctaProjects: "View Projects",
-      ctaCertificates: "View Certificates",
-      keyHighlights: "Key Highlights",
-      yearsExp: "4+ years of coordination and CRM operations experience",
-      metricRenewal: "Over 90% certificate renewal retention",
-      metricAutomation: "CRM Auto-Alert reduced repetitive work by 30%+",
-    },
-    about: {
-      title: "About Sukanya",
-      summaryTitle: "Professional Summary",
-      skillsTitle: "Core Skills",
-      educationTitle: "Education",
-      languagesTitle: "Languages",
-    },
-    experience: {
-      title: "Work Experience",
-      subtitle: "Career path across laboratory operations and customer coordination",
-      achievements: "Quantified Achievements",
-    },
-    projects: {
-      title: "Featured Projects",
-      subtitle: "Case studies based on real work outcomes",
-      role: "Role",
-      context: "Context",
-      challenge: "Challenge",
-      tools: "Tools / Process",
-      actions: "Actions",
-      outcomes: "Outcomes",
-      evidenceType: "Evidence Type",
-    },
-    certificates: {
-      title: "Certificate Repository",
-      subtitle: "Centralized storage for certificates and supporting files",
-      allCategories: "All categories",
-      allYears: "All years",
-      preview: "Preview",
-      download: "Download",
-      placeholder: "Awaiting uploaded file",
-      issueDate: "Issued",
-      credentialId: "Credential ID",
-      category: "Category",
-      noMatch: "No certificates match this filter",
-      close: "Close",
-      previewUnavailable: "Preview is not available yet",
-    },
-    contact: {
-      title: "Contact",
-      subtitle: "Reach out by email or send a message using the form",
-      emailLabel: "Email",
-      formName: "Name",
-      formEmail: "Email",
-      formSubject: "Subject",
-      formMessage: "Message",
-      submit: "Send message",
-      submitting: "Sending...",
-      success: "Message sent successfully",
-      error: "Message could not be sent. Please try again.",
-    },
-    common: {
-      footer: "Sukanya Kijjapalo Portfolio",
-      localeSwitch: "Language",
-    },
+  footer: {
+    en: "Portfolio of Sukanya Kijjapalo",
+    th: "พอร์ตโฟลิโอของสุคนธญา กิจจาปาโล",
   },
 };
 
-export function getDictionary(locale: Locale): Dictionary {
-  return dictionaries[locale];
+export function primary(text: LocalizedText): string {
+  return text[primaryLocale];
 }

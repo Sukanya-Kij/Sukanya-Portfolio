@@ -1,41 +1,25 @@
 import type { Metadata } from "next";
-import type { Locale } from "@/lib/types";
+import { getSiteUrl } from "@/lib/site-url";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = getSiteUrl();
 
-export const routeSegments = [
-  "",
-  "/about",
-  "/experience",
-  "/projects",
-  "/certificates",
-  "/contact",
-] as const;
+export const routeSegments = ["", "/about", "/portfolio", "/contact"] as const;
 
-export function buildPageMetadata(
-  locale: Locale,
-  title: string,
-  description: string,
-  path: string,
-): Metadata {
-  const canonical = `/${locale}${path}`;
+export function buildPageMetadata(title: string, description: string, path: string): Metadata {
+  const canonical = path || "/";
 
   return {
     title,
     description,
     alternates: {
       canonical,
-      languages: {
-        th: `/th${path}`,
-        en: `/en${path}`,
-      },
     },
     openGraph: {
       title,
       description,
       url: `${siteUrl}${canonical}`,
       siteName: "Sukanya Kijjapalo Portfolio",
-      locale: locale === "th" ? "th_TH" : "en_US",
+      locale: "en_US",
       type: "website",
     },
     twitter: {

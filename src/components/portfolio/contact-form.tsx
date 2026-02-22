@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { getDictionary } from "@/lib/i18n";
-import type { Locale } from "@/lib/types";
+import { ui } from "@/lib/i18n";
 
 type FormState = {
   name: string;
@@ -20,8 +19,7 @@ const initialState: FormState = {
   website: "",
 };
 
-export function ContactForm({ locale }: { locale: Locale }) {
-  const dict = getDictionary(locale);
+export function ContactForm() {
   const [state, setState] = useState<FormState>(initialState);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
@@ -54,48 +52,48 @@ export function ContactForm({ locale }: { locale: Locale }) {
   }
 
   return (
-    <form onSubmit={onSubmit} className="reveal space-y-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-      <label className="block text-sm font-medium text-slate-700">
-        {dict.contact.formName}
+    <form onSubmit={onSubmit} className="reveal premium-card space-y-4 p-6">
+      <label className="block text-sm font-medium text-emerald-900/90">
+        {ui.contact.formName}
         <input
           required
           value={state.name}
           onChange={(event) => updateField("name", event.target.value)}
-          className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2"
+          className="mt-1 w-full min-h-[44px] rounded-xl border border-emerald-200 px-4 py-2"
           maxLength={120}
         />
       </label>
 
-      <label className="block text-sm font-medium text-slate-700">
-        {dict.contact.formEmail}
+      <label className="block text-sm font-medium text-emerald-900/90">
+        {ui.contact.formEmail}
         <input
           type="email"
           required
           value={state.email}
           onChange={(event) => updateField("email", event.target.value)}
-          className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2"
+          className="mt-1 w-full min-h-[44px] rounded-xl border border-emerald-200 px-4 py-2"
           maxLength={180}
         />
       </label>
 
-      <label className="block text-sm font-medium text-slate-700">
-        {dict.contact.formSubject}
+      <label className="block text-sm font-medium text-emerald-900/90">
+        {ui.contact.formSubject}
         <input
           required
           value={state.subject}
           onChange={(event) => updateField("subject", event.target.value)}
-          className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2"
+          className="mt-1 w-full min-h-[44px] rounded-xl border border-emerald-200 px-4 py-2"
           maxLength={160}
         />
       </label>
 
-      <label className="block text-sm font-medium text-slate-700">
-        {dict.contact.formMessage}
+      <label className="block text-sm font-medium text-emerald-900/90">
+        {ui.contact.formMessage}
         <textarea
           required
           value={state.message}
           onChange={(event) => updateField("message", event.target.value)}
-          className="mt-1 min-h-36 w-full rounded-xl border border-slate-300 px-3 py-2"
+          className="mt-1 min-h-[144px] w-full rounded-xl border border-emerald-200 px-4 py-3"
           maxLength={3000}
         />
       </label>
@@ -108,13 +106,13 @@ export function ContactForm({ locale }: { locale: Locale }) {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="rounded-xl bg-teal-700 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-teal-800 disabled:opacity-50"
+        className="btn-primary min-h-11 rounded-xl bg-emerald-800 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-900 disabled:opacity-50"
       >
-        {status === "submitting" ? dict.contact.submitting : dict.contact.submit}
+        {status === "submitting" ? ui.contact.submitting : ui.contact.submit}
       </button>
 
-      {status === "success" ? <p className="text-sm text-emerald-700">{dict.contact.success}</p> : null}
-      {status === "error" ? <p className="text-sm text-rose-700">{dict.contact.error}</p> : null}
+      {status === "success" ? <p className="text-sm text-emerald-700">{ui.contact.success}</p> : null}
+      {status === "error" ? <p className="text-sm text-rose-700">{ui.contact.error}</p> : null}
     </form>
   );
 }
