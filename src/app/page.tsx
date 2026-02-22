@@ -4,7 +4,9 @@ import type { Metadata } from "next";
 import { profile } from "@/lib/content";
 import { primary, ui } from "@/lib/i18n";
 import { buildPageMetadata } from "@/lib/seo";
-import { Briefcase, Handshake, TrendingUp } from "lucide-react";
+import { Briefcase, Handshake, TrendingUp, BarChart, Target } from "lucide-react";
+import { SkillsRadarChart } from "@/components/portfolio/skills-radar-chart";
+import { ImpactAreaChart } from "@/components/portfolio/impact-area-chart";
 
 export const metadata: Metadata = buildPageMetadata(
   "Home",
@@ -81,6 +83,35 @@ export default function HomePage() {
             </article>
           );
         })}
+      </section>
+
+      {/* Performance Metrics - Recharts */}
+      <section className="grid gap-6 lg:grid-cols-12">
+        {/* Radar Chart */}
+        <article className="reveal premium-card p-6 lg:col-span-4 flex flex-col items-center bg-white/60">
+          <div className="w-full flex items-center justify-between mb-2">
+            <h2 className="heading-luxe text-xl text-emerald-950 flex items-center gap-2">
+              <Target className="h-5 w-5 text-[#c8a96f]" />
+              Core Competencies
+            </h2>
+            <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600/60 bg-emerald-50 px-2 py-0.5 rounded-full">Skills</span>
+          </div>
+          <SkillsRadarChart />
+        </article>
+
+        {/* Area Chart */}
+        <article className="reveal premium-card p-6 lg:col-span-8 flex flex-col justify-between bg-white/60" style={{ animationDelay: '100ms' }}>
+          <div className="w-full flex items-center justify-between mb-4">
+            <div className="space-y-1">
+              <h2 className="heading-luxe text-xl text-emerald-950 flex items-center gap-2">
+                <BarChart className="h-5 w-5 text-[#c8a96f]" />
+                Performance Impact
+              </h2>
+              <p className="text-xs font-semibold tracking-wide text-emerald-700/80">Certificate Renewal Retention vs Industry Average</p>
+            </div>
+          </div>
+          <ImpactAreaChart />
+        </article>
       </section>
 
       {/* Image Gallery */}
