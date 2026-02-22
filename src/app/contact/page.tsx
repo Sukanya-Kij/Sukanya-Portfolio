@@ -44,18 +44,30 @@ export default function ContactPage() {
               <p className="text-emerald-300 font-medium text-sm">Coordination & CRM Professional</p>
             </div>
           </div>
-          <div className="p-6 sm:p-8 bg-white/70 backdrop-blur-md">
-             <div className="flex items-start gap-4 p-5 rounded-2xl bg-emerald-50/50 border border-emerald-100/50 hover:bg-emerald-100/50 transition-colors group/email">
-               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-900 to-emerald-950 flex items-center justify-center shrink-0 shadow-inner group-hover/email:-translate-y-1 transition-transform duration-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dfca9f" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-               </div>
-               <div>
-                  <p className="text-[10px] font-bold tracking-widest text-[#b89555] uppercase mb-1.5">{ui.contact.emailLabel}</p>
-                  <a href={`mailto:${profile.email}`} className="text-emerald-950 font-semibold tracking-wide hover:text-emerald-700 transition-colors break-all">
-                    {profile.email}
-                  </a>
-               </div>
-             </div>
+          <div className="p-6 sm:p-8 bg-white/70 backdrop-blur-md space-y-4">
+            <div className="flex items-start gap-4 p-5 rounded-2xl bg-emerald-50/50 border border-emerald-100/50 hover:bg-emerald-100/50 transition-colors group/contact">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-900 to-emerald-950 flex items-center justify-center shrink-0 shadow-inner group-hover/contact:-translate-y-1 transition-transform duration-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dfca9f" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+              </div>
+              <div>
+                <p className="text-[10px] font-bold tracking-widest text-[#b89555] uppercase mb-1.5">{ui.contact.emailLabel}</p>
+                <a href={`mailto:${profile.email}`} className="text-emerald-950 font-semibold tracking-wide hover:text-emerald-700 transition-colors break-all">
+                  {profile.email}
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4 p-5 rounded-2xl bg-emerald-50/50 border border-emerald-100/50 hover:bg-emerald-100/50 transition-colors group/contact">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-900 to-emerald-950 flex items-center justify-center shrink-0 shadow-inner group-hover/contact:-translate-y-1 transition-transform duration-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dfca9f" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
+              </div>
+              <div>
+                <p className="text-[10px] font-bold tracking-widest text-[#b89555] uppercase mb-1.5">Instagram</p>
+                <a href="https://www.instagram.com/tonfern98/" target="_blank" rel="noopener noreferrer" className="text-emerald-950 font-semibold tracking-wide hover:text-emerald-700 transition-colors break-all">
+                  @tonfern98
+                </a>
+              </div>
+            </div>
           </div>
         </article>
 
