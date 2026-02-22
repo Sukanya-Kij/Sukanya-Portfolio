@@ -11,6 +11,7 @@ export interface Profile {
   title: LocalizedText;
   summary: LocalizedText;
   email: string;
+  phone?: string;
   location?: string;
   skills: Record<Locale, string[]>;
   languages: { name: string; level: LocalizedText }[];
