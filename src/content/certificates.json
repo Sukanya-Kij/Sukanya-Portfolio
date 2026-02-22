@@ -5,10 +5,13 @@
       "th": "Top CRM Executive Recognition 2025",
       "en": "Top CRM Executive Recognition 2025"
     },
+    "description": {
+      "th": "รางวัลพนักงานขายยอดเยี่ยมด้าน CRM แห่งปี 2025 ที่แสดงถึงความมุ่งมั่นและผลงานอันโดดเด่น",
+      "en": "Awarded for exceptional performance and outstanding dedication as a CRM Executive in 2025."
+    },
     "issuer": "SGS Thailand Ltd.",
     "issueDate": "2025",
     "category": "sales-recognition",
-    "fileUrl": "/images/certificates/sgs-certificate-crm-auto-alert-2023.jpg",
     "previewImage": "/images/certificates/sgs-certificate-crm-auto-alert-2023.jpg",
     "featured": true,
     "placeholder": false
@@ -19,10 +22,13 @@
       "th": "Certificate of Recognition: CRM Auto Alert",
       "en": "Certificate of Recognition: CRM Auto Alert"
     },
+    "description": {
+      "th": "ใบประกาศเกียรติคุณสำหรับความคิดริเริ่มในการพัฒนาระบบ CRM Auto Alert เพื่อผลักดันนวัตกรรมและลดขั้นตอนการทำงาน",
+      "en": "Recognition for initiating the CRM Auto Alert system to drive innovation and improve workflow efficiency."
+    },
     "issuer": "SGS (Thailand) Limited",
     "issueDate": "2023",
     "category": "innovation",
-    "fileUrl": "/images/achievements/sgs-top-crm-executive-2025.jpg",
     "previewImage": "/images/achievements/sgs-top-crm-executive-2025.jpg",
     "featured": true,
     "placeholder": false

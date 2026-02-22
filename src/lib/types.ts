@@ -46,6 +46,7 @@ export interface ProjectItem {
 export interface CertificateItem {
   id: string;
   title: LocalizedText;
+  description?: LocalizedText;
   issuer: string;
   issueDate: string;
   category: string;

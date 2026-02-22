@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Eye, Download, Award, Calendar, X, ImageIcon, SearchX } from "lucide-react";
+import { Eye, Award, Calendar, X, ImageIcon, SearchX } from "lucide-react";
 import { ui } from "@/lib/i18n";
 import type { CertificateItem } from "@/lib/types";
 
@@ -29,9 +29,7 @@ function issueDateLabel(issueDate: string): string {
   return `${monthNames[monthIndex] ?? "Jan"} ${year}`;
 }
 
-function isImageAsset(url: string): boolean {
-  return /\.(png|jpe?g|webp|gif|avif)$/i.test(url);
-}
+
 
 export function CertificatesBrowser({ items }: { items: CertificateItem[] }) {
   const [category, setCategory] = useState("all");
@@ -218,26 +216,21 @@ export function CertificatesBrowser({ items }: { items: CertificateItem[] }) {
                   </p>
                 ) : null}
 
-                <div className="mt-auto pt-6 flex gap-2">
+                {item.description ? (
+                  <p className="mt-3 text-xs leading-relaxed text-emerald-800/80">
+                    {item.description.en}
+                  </p>
+                ) : null}
+
+                <div className="mt-auto pt-6 flex">
                   <button
                     type="button"
                     onClick={() => setSelected(item)}
-                    className="flex min-h-[40px] flex-1 items-center justify-center gap-2 rounded-lg border border-emerald-300 bg-white px-3 py-2 text-sm font-semibold text-emerald-800 shadow-xs transition hover:bg-emerald-50 hover:text-emerald-950"
+                    className="flex min-h-[40px] w-full items-center justify-center gap-2 rounded-lg border border-[#c8a96f]/60 bg-gradient-to-br from-[#dfca9f]/20 via-[#c8a96f]/10 to-transparent px-3 py-2 text-sm font-bold text-emerald-900 shadow-sm transition hover:border-[#c8a96f] hover:bg-emerald-50 hover:text-emerald-950"
                   >
-                    <Eye className="h-4 w-4" />
+                    <Eye className="h-4 w-4 text-[#c8a96f]" />
                     {ui.certificates.preview}
                   </button>
-
-                  {item.fileUrl ? (
-                    <a
-                      href={item.fileUrl}
-                      download
-                      className="flex min-h-[40px] flex-1 items-center justify-center gap-2 rounded-lg border border-[#c8a96f] bg-gradient-to-br from-[#dfca9f] via-[#c8a96f] to-[#b89555] px-3 py-2 text-sm font-bold text-[#3b2d13] shadow-md shadow-[#c8a96f]/20 transition hover:bg-gradient-to-br hover:from-[#c8a96f] hover:to-[#a98544] hover:shadow-[#c8a96f]/30 hover:brightness-105"
-                    >
-                      <Download className="h-4 w-4" />
-                      {ui.certificates.download}
-                    </a>
-                  ) : null}
                 </div>
               </div>
             </article>
@@ -273,27 +266,25 @@ export function CertificatesBrowser({ items }: { items: CertificateItem[] }) {
               </button>
             </div>
 
-            {selected.fileUrl && isImageAsset(selected.fileUrl) ? (
-              <Image
-                src={selected.fileUrl}
-                alt={selected.title.en}
-                width={1200}
-                height={800}
-                className="max-h-[70vh] w-full rounded-xl border border-emerald-200 object-contain"
-              />
-            ) : selected.fileUrl ? (
-              <iframe src={selected.fileUrl} title={selected.title.en} className="h-[70vh] w-full rounded-xl border border-emerald-200" />
-            ) : selected.previewImage ? (
-              <Image
-                src={selected.previewImage}
-                alt={selected.title.en}
-                width={1200}
-                height={800}
-                className="max-h-[70vh] w-full rounded-xl border border-emerald-200 object-contain"
-              />
+            {selected.previewImage ? (
+              <div className="flex flex-col gap-4">
+                <Image
+                  src={selected.previewImage}
+                  alt={selected.title.en}
+                  width={1200}
+                  height={800}
+                  className="max-h-[65vh] w-full rounded-xl border border-emerald-200 object-contain bg-emerald-50/50"
+                />
+                {selected.description ? (
+                  <p className="rounded-lg bg-emerald-50 p-4 text-sm leading-relaxed text-emerald-800 border border-emerald-100/50">
+                    {selected.description.en}
+                  </p>
+                ) : null}
+              </div>
             ) : (
-              <div className="flex h-[70vh] items-center justify-center rounded-xl border border-dashed border-emerald-300 text-sm text-emerald-700">
-                {ui.certificates.previewUnavailable}
+              <div className="flex h-[60vh] flex-col items-center justify-center gap-3 rounded-xl border border-dashed border-emerald-300 text-emerald-700 bg-emerald-50/30">
+                <ImageIcon className="h-8 w-8 opacity-50" />
+                <span className="text-sm font-medium">{ui.certificates.previewUnavailable}</span>
               </div>
             )}
           </div>
