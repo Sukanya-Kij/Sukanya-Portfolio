@@ -2,7 +2,6 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { GraduationCap, Globe, Check } from "lucide-react";
 import { ExperienceTimeline } from "@/components/portfolio/experience-timeline";
-import { SectionHeading } from "@/components/portfolio/section-heading";
 import { profile, experiences } from "@/lib/content";
 import { primary, ui } from "@/lib/i18n";
 import { buildPageMetadata } from "@/lib/seo";
@@ -12,7 +11,27 @@ export const metadata: Metadata = buildPageMetadata("About & Experience", "Profe
 export default function AboutPage() {
   return (
     <div className="space-y-12">
-      <SectionHeading title={ui.about.title + " & " + ui.experience.title} subtitle={ui.home.intro.en} />
+      {/* Hero Section */}
+      <section className="reveal premium-card relative overflow-hidden rounded-3xl p-10 md:p-16 shadow-2xl min-h-[40vh] flex flex-col justify-end">
+        {/* Background Texture */}
+        <div className="absolute inset-0 z-0">
+          <Image src="/images/abstract/emerald-gold-texture.png" alt="Abstract luxury texture" fill className="object-cover opacity-80 mix-blend-multiply" priority />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/80 to-emerald-900/40 z-10" />
+
+        <div className="relative z-20 max-w-3xl transform hover:translate-x-2 transition-transform duration-700">
+          <div className="inline-flex items-center gap-2 mb-6">
+            <span className="h-px w-8 bg-[#c8a96f]"></span>
+            <p className="eyebrow text-[#dfca9f] tracking-widest uppercase">Professional Profile</p>
+          </div>
+          <h1 className="heading-luxe text-5xl md:text-6xl text-white mb-4 drop-shadow-md">
+            {ui.about.title} & {ui.experience.title}
+          </h1>
+          <p className="text-lg text-emerald-100/90 font-light leading-relaxed max-w-2xl border-l-2 border-[#c8a96f]/50 pl-4 py-1">
+            {ui.home.intro.en}
+          </p>
+        </div>
+      </section>
 
       {/* About Section */}
       <div className="grid gap-6 lg:grid-cols-3">
@@ -85,12 +104,6 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Decorative image in languages section */}
-          <div className="mt-8 rounded-xl overflow-hidden relative h-48 border border-emerald-100/50 shadow-inner group">
-            <Image src="/images/abstract/emerald-gold-texture.png" alt="Abstract luxury emerald texture" fill className="media-lift object-cover opacity-90 mix-blend-multiply transition-opacity duration-1000 group-hover:opacity-100" />
-            <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/40 to-transparent"></div>
           </div>
         </section>
       </div>
