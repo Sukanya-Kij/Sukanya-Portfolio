@@ -45,7 +45,7 @@ export default function ContactPage() {
         <article className="reveal premium-card overflow-hidden group lg:col-span-2">
           <div className="relative h-64 sm:h-80 w-full">
             <Image
-              src="/images/people/formal/fern-office-portrait-contact.jpg"
+              src="/images/people/formal/office-portrait-saigon.jpg"
               alt="Fern portrait for contact section"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
