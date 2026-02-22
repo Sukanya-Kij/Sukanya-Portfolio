@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { GraduationCap, Globe, Check } from "lucide-react";
 import { ExperienceTimeline } from "@/components/portfolio/experience-timeline";
 import { SectionHeading } from "@/components/portfolio/section-heading";
 import { profile, experiences } from "@/lib/content";
@@ -43,14 +44,16 @@ export default function AboutPage() {
       <div className="grid gap-6 lg:grid-cols-2">
         <section className="reveal premium-card p-8">
           <h2 className="heading-luxe text-3xl text-emerald-950 flex items-center gap-3">
-            <span className="bg-emerald-100 p-2 rounded-lg text-emerald-700">🎓</span>
+            <span className="flex items-center justify-center p-2 rounded-xl bg-gradient-to-br from-emerald-50 to-emerald-100/50 border border-emerald-200/50 text-emerald-700 shadow-sm">
+              <GraduationCap className="h-6 w-6" />
+            </span>
             {ui.about.education}
           </h2>
           <div className="mt-6 space-y-5 text-sm text-emerald-900/85 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-emerald-300/50 before:to-transparent">
             {profile.education.map((item) => (
               <div key={item.institution} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-emerald-100 text-emerald-600 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                  ✓
+                <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-gradient-to-br from-emerald-100 to-[#c8a96f]/20 text-emerald-700 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                  <Check className="h-5 w-5" strokeWidth={3} />
                 </div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white/60 backdrop-blur-sm p-4 rounded-xl border border-emerald-100 shadow-sm hover:shadow-md transition-all">
                   <p className="font-bold text-emerald-950 text-base">{primary(item.degree)}</p>
@@ -64,7 +67,9 @@ export default function AboutPage() {
 
         <section className="reveal premium-card p-8">
           <h2 className="heading-luxe text-3xl text-emerald-950 flex items-center gap-3">
-            <span className="bg-emerald-100 p-2 rounded-lg text-emerald-700">🌍</span>
+            <span className="flex items-center justify-center p-2 rounded-xl bg-gradient-to-br from-emerald-50 to-emerald-100/50 border border-emerald-200/50 text-emerald-700 shadow-sm">
+              <Globe className="h-6 w-6" />
+            </span>
             {ui.about.languages}
           </h2>
           <div className="mt-6 space-y-4 text-sm text-emerald-900/85">
@@ -83,9 +88,9 @@ export default function AboutPage() {
           </div>
 
           {/* Decorative image in languages section */}
-          <div className="mt-8 rounded-xl overflow-hidden relative h-48 border border-emerald-100/50">
-            <Image src="/images/achievements/sgs-team-recognition-stage.jpg" alt="Team recognition" fill className="object-cover opacity-80 mix-blend-multiply filter grayscale hover:grayscale-0 transition-all duration-500" />
-            <div className="absolute inset-0 bg-emerald-900/20"></div>
+          <div className="mt-8 rounded-xl overflow-hidden relative h-48 border border-emerald-100/50 shadow-inner group">
+            <Image src="/images/abstract/emerald-gold-texture.png" alt="Abstract luxury emerald texture" fill className="object-cover opacity-90 mix-blend-multiply transition-all duration-700 group-hover:scale-105 group-hover:opacity-100" />
+            <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/40 to-transparent"></div>
           </div>
         </section>
       </div>
