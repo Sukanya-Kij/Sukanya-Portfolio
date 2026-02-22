@@ -35,10 +35,10 @@ export default function HomePage() {
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-emerald-900/80">{ui.home.intro.en}</p>
 
           <div className="mt-10 flex flex-wrap gap-4 items-center">
-            <Link href="/about" className="btn-primary rounded-full bg-gradient-to-r from-emerald-800 to-emerald-950 px-8 py-3.5 text-sm font-bold tracking-wide text-white shadow-xl hover:shadow-emerald-900/20 transition-all">
+            <Link href="/about" className="btn-primary flex items-center justify-center rounded-full bg-[#c8a96f] px-8 py-3.5 text-sm font-bold tracking-wide text-emerald-950 shadow-lg shadow-[#c8a96f]/20 hover:bg-[#b89555] hover:shadow-[#c8a96f]/40 transition-all">
               {ui.home.ctaExperience}
             </Link>
-            <Link href="/portfolio" className="group flex items-center gap-2 px-6 py-3.5 text-sm font-bold tracking-wide text-emerald-900 hover:text-emerald-700 transition-colors">
+            <Link href="/portfolio" className="group flex items-center justify-center gap-2 rounded-full border border-emerald-200/50 bg-emerald-50/50 px-6 py-3.5 text-sm font-bold tracking-wide text-emerald-900 hover:bg-emerald-100/50 hover:text-emerald-950 transition-colors">
               {ui.home.ctaPortfolio}
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
